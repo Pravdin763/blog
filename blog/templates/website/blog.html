@@ -61,8 +61,8 @@ function clearText(field)
 
                 <h2><a href="#">{{ i.title }}</a></h2>
                 <div class="news_meta">{{ i.date }}
-                <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ i.image.url}}" width=80% alt="image 1" /></a></div>
-              <p align="justify">{{ i.descriptions }}</a><a href="#" class="continue"> Читать далее ...</a></p>
+                <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ i.image.url}}" width=100% alt="image 1" /></a></div>
+              <p align="justify">{{ i.descriptions|truncatechars:500 }}</a><a href="#" class="continue"> Читать далее ...</a></p>
               <div class="cleaner"></div>
             </div>
             {% endfor %}
