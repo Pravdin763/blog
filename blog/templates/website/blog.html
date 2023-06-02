@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Мини блог</title>
+</head>
+<body>
+    {% for i in post_list %}
+        <h3>{{ i.title }}</h3>
+        <p>{{ i.descriptions }}</p>
+        <p>{{ i.author }}</p>
+        <p>{{ i.date }}</p>
+    {% endfor %}
+</body>
+</html>
