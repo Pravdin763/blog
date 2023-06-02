@@ -6,6 +6,8 @@ class Post(models.Model):
     descriptions = models.TextField('Описание', max_length=1000)
     author = models.CharField('Имя автора', max_length=100)
     date = models.DateField('Дата публикации')
+    image = models.ImageField('Картинка', upload_to='image/')
+    #short_text = descriptions[:100]
 
     def __str__(self):
         return f'{self.title}, {self.author}'

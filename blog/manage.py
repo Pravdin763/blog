@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+# h2 { font-size: 28px; font-weight: normal; margin: 2 0 15px 0; padding: 10px 0 15px 0; }
 
 def main():
     """Run administrative tasks."""
