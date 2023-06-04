@@ -54,19 +54,16 @@ function clearText(field)
         </div>
     </div> <!-- end of templatemo_menu -->
 
-    <div id="templatemo_main">
 
         <div id="templatemo_content">
-            {% for i in post_list %}
         	<div class="post_box">
-
-                <h2><a href="{{ i.id }}">{{ i.title }}</a></h2>
-                <div class="news_meta">{{ i.date }}
-                <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ i.image.url}}" width=100% alt="image 1" /></a></div>
-              <p align="justify">{{ i.descriptions|truncatechars:500 }}<a href="{{ i.id }}" class="continue"> Читать далее ...</a></p>
+                <h2><a href="#">{{ post.title }}</a></h2>
+                <div class="news_meta">{{ post.date }}
+                <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ post.image.url}}" width=100% alt="image 1" /></a></div>
+              <p align="justify">{{ post.descriptions }}</p>
+                    <p align="right">Автор: {{ post.author }}</p>
               <div class="cleaner"></div>
             </div>
-            {% endfor %}
           </div>
 
         </div>
@@ -78,7 +75,7 @@ function clearText(field)
     	<div class="cleaner"></div>
     </div>
 
-</div>
+
 <div class="cleaner"></div>
 </div>
 

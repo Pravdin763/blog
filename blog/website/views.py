@@ -11,3 +11,8 @@ class PostView(View):
         posts = Post.objects.all().order_by('-date')
         return render(request, 'website/blog.html', {'post_list': posts})
 
+class PostDetail(View):
+    """Отдельная страница записи"""
+    def get(self, request, pk):
+        post = Post.objects.get(id=pk)
+        return render(request, 'website/blog_detail.html', {'post': post})
