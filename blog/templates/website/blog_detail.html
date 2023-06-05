@@ -72,7 +72,8 @@ function clearText(field)
         <div class="form-comment">
             <h3>Оставить комментарий</h3>
             <div>
-                <form action="#" method="post">
+                <form action="{% url 'AddComments' post.id %}" method="post">
+                    {% csrf_token %}
                 <div>
                     <label>Ваш комментарий</label>
                     <textarea name="text_comment"></textarea>
@@ -90,6 +91,14 @@ function clearText(field)
                          </div>
                     </form>
             </div>
+        </div>
+            <div>
+            {% for co in post.comments_set.all %}
+            <div class="view-comment">
+                <h3>{{ co.name }}</h3>
+                <p>{{co.text_comment }}</p>
+                </div>
+            {% endfor %}
         </div>
         </div>
 
