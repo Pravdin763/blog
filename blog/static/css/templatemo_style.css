@@ -394,22 +394,30 @@ a.continue { color: #F00; font-weight: bold; text-decoration: none; }
     border-radius: 15px;
     padding: 15px;
     height: 50px;
-    width: 250px;
+    width: 300px;
 }
 
 .form-comment textarea{
     border-radius: 15px;
     padding: 15px;
     height: 150px;
-    width: 100%;
+    width: 300px;
     resize: vertical;
 }
 .form-comment div{
-    margin: 10px
+    margin: 10px;
 }
 .view-comment {
-    padding: 10px;
-    margin: 10px;
+    padding: 0px;
+    margin: 0px;
     font-size: 15px;
-    border-radius: 15px;
+    border-radius: 10px;
+}
+
+.like a + a {
+     margin-left: 10px;
+}
+.like {
+     margin-left: 10px;
+     font-size: 14px;
 }

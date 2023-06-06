@@ -62,11 +62,15 @@ function clearText(field)
                 <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ post.image.url}}" width=100% alt="image 1" /></a></div>
               <p align="justify">{{ post.descriptions }}</p>
                     <p align="right">Автор: {{ post.author }}</p>
-                    <div>
+                    <div class="like">
                         <br>
-                        <p>Понравилось: {{ post.likes_set.all.count }}</p>
+                        <p style="font-size: 15px; color: #00FF00; border:2px solid #00FF00; border-radius:3px; width: 120px; text-align:justify;  margin:5px; padding:5px;" >Понравилось: {{ post.likes_set.all.count }}</p>
                         <br>
-                        <a href="{% url 'AddLikes' post.id %}">Нравится</a>
+                        <a href="{% url 'AddLikes' post.id %}"><img src="..\images\image\like.png" width="25"
+   height="25" alt="Нравится"></a>
+                        <a href="{% url 'AddLikes' post.id %}">Нравится   </a>
+                        <a href="{% url 'Dellikes' post.id %}"><img src="..\images\image\dis.png" width="25"
+   height="25" alt="Не нравится"></a>
                         <a href="{% url 'Dellikes' post.id %}">Не нравится</a>
                     </div>
               <div class="cleaner"></div>
@@ -77,6 +81,9 @@ function clearText(field)
 
         <div id="templatemo_sidebar">
         <div class="form-comment">
+            <br>
+            <br>
+            <br>
             <h3>Оставить комментарий</h3>
             <div>
                 <form action="{% url 'AddComments' post.id %}" method="post">
@@ -102,8 +109,9 @@ function clearText(field)
             <div>
             {% for co in post.comments_set.all %}
             <div class="view-comment">
-                <h3>{{ co.name }}</h3>
-                <p>{{co.text_comment }}</p>
+                <br>
+                <p style="margin-left: 10px"><b>{{ co.name }}</b></p>
+                <p style="color: #FFF8DC; border:2px solid #00CED1; border-radius:5px; width: 280px; text-align:justify;  margin:5px; padding:12px;" >{{co.text_comment }}</p>
                 </div>
             {% endfor %}
         </div>
