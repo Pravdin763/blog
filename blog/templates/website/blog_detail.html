@@ -62,6 +62,13 @@ function clearText(field)
                 <div class="image_wrapper"><a href="http://www.templatemo.com/page/1" target="_parent"><img src="{{ post.image.url}}" width=100% alt="image 1" /></a></div>
               <p align="justify">{{ post.descriptions }}</p>
                     <p align="right">Автор: {{ post.author }}</p>
+                    <div>
+                        <br>
+                        <p>Понравилось: {{ post.likes_set.all.count }}</p>
+                        <br>
+                        <a href="{% url 'AddLikes' post.id %}">Нравится</a>
+                        <a href="{% url 'Dellikes' post.id %}">Не нравится</a>
+                    </div>
               <div class="cleaner"></div>
             </div>
           </div>

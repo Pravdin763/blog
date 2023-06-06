@@ -382,3 +382,34 @@ a.continue { color: #F00; font-weight: bold; text-decoration: none; }
 	background: #fff;
 	text-align: center;
 }
+
+.form-comment {
+    font-size: 14px;
+}
+    .form-comment label{
+    margin: 10px 10px;
+}
+
+.form-comment input{
+    border-radius: 15px;
+    padding: 15px;
+    height: 50px;
+    width: 250px;
+}
+
+.form-comment textarea{
+    border-radius: 15px;
+    padding: 15px;
+    height: 150px;
+    width: 100%;
+    resize: vertical;
+}
+.form-comment div{
+    margin: 10px
+}
+.view-comment {
+    padding: 10px;
+    margin: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+}
