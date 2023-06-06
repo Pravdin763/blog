@@ -396,7 +396,15 @@ a.continue { color: #F00; font-weight: bold; text-decoration: none; }
     height: 50px;
     width: 300px;
 }
+.form-comment input[type="submit"]{
+    border-radius: 15px;
+    padding: 15px;
+    height: 50px;
+    width: 220px;
+    margin-left: 40px;
+    background: #00FA9A;
 
+}
 .form-comment textarea{
     border-radius: 15px;
     padding: 15px;
